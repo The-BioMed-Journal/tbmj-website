@@ -54,6 +54,7 @@ export default async function HomePage() {
         links={[
           { label: "Events", url: "/events" },
           { label: "About Us", url: "/about" },
+          { label: "Instagram", url: "https://www.instagram.com/thebiomed_journal/" },
           { label: "Medium", url: "https://medium.com/@thebiomedjournal" },
           { label: "Substack", url: "https://substack.com/@thebiomedjournal" },
         ]}
@@ -65,10 +66,7 @@ export default async function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--dark-green)]">
             Latest Events
           </h2>
-          <Link
-            href="/events"
-            className="text-[var(--light-green)] font-medium hover:underline"
-          >
+          <Link href="/events" className="text-[var(--light-green)] font-medium hover:underline">
             View all programs →
           </Link>
         </div>
@@ -104,10 +102,7 @@ export default async function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--dark-green)]">
             Latest Publishings
           </h2>
-          <Link
-            href="/articles"
-            className="text-[var(--light-green)] font-medium hover:underline"
-          >
+          <Link href="/articles" className="text-[var(--light-green)] font-medium hover:underline">
             View all →
           </Link>
         </div>

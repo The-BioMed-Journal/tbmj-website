@@ -21,63 +21,31 @@ const TeamList = [
 export default function Page() {
   return (
     <div className="mx-auto max-w-screen-xl px-6 md:px-12 lg:px-16 py-16">
-      {/* Intro section */}
       <section className="text-center max-w-4xl mx-auto">
         <p className="uppercase tracking-[0.2em] text-sm text-[var(--light-green)] font-semibold mb-3">
           About Us
         </p>
-
         <h1 className="font-bold text-4xl md:text-6xl text-[var(--dark-green)] leading-tight mb-6">
           Who Are We?
         </h1>
-
         <div className="space-y-6 text-lg md:text-xl leading-8 text-[var(--dark-green)] opacity-90">
           <p>
-            We are a high school–run journal and organization focused on
-            research, discovery, and sharing knowledge in the biological
-            sciences.
-          </p>
-
-          <p>
-            Our mission is to mentor students in writing research papers and
-            literature reviews while giving them the opportunity to{" "}
-            <span className="font-semibold text-[var(--dark-green)]">
-              explore different topics in biological sciences
-            </span>
-            .
-          </p>
-
-          <p>
-            We aim to{" "}
-            <span className="font-semibold text-[var(--dark-green)]">
-              bridge the gap
-            </span>{" "}
-            between classroom learning and real scientific inquiry in the lab.
-            Our platform serves as a space to publish student-written papers and
-            inspire curiosity in future researchers.
+            We are a student-led organization aiming to bridge the gap between classroom learning and real scientific inquiry in the lab. Our goal is to provide accessible resources and opportunities to expand horizons for middle school and high school students, while encouraging research in biological sciences.
           </p>
         </div>
       </section>
 
-      {/* CTA links */}
       <div className="mt-14">
         <LinkSection
           title="Read our articles"
           links={[
             { label: "Our Website", url: "/articles" },
-            {
-              label: "Substack",
-              url: "https://substack.com/@thebiomedjournal",
-            },
-            {
-              label: "Medium",
-              url: "https://medium.com/@thebiomedjournal",
-            },
+            { label: "Substack", url: "https://substack.com/@thebiomedjournal" },
+            { label: "Medium", url: "https://medium.com/@thebiomedjournal" },
           ]}
         />
       </div>
 
-      {/* Team section */}
       <section className="mt-24">
         <div className="text-center mb-12">
           <p className="uppercase tracking-[0.2em] text-sm text-[var(--light-green)] font-semibold mb-2">
@@ -88,8 +56,7 @@ export default function Page() {
           </h2>
           <div className="w-24 h-1 bg-[var(--light-green)] mx-auto mt-4 rounded-full opacity-70" />
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+  q      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {TeamList.map((member, index) => (
             <TeamCard key={index} {...member} />
           ))}
