@@ -54,6 +54,7 @@ export default async function HomePage() {
         links={[
           { label: "Events", url: "/events" },
           { label: "About Us", url: "/about" },
+          { label: "Instagram", url: "https://www.instagram.com/thebiomed_journal/" },
           { label: "Medium", url: "https://medium.com/@thebiomedjournal" },
           { label: "Substack", url: "https://substack.com/@thebiomedjournal" },
         ]}
