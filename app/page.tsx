@@ -1,4 +1,3 @@
-cat > ~/tbmj-main/app/events/page.tsx << 'EOF'
 import Image from "next/image";
 
 const EVENTS_DATA = [
