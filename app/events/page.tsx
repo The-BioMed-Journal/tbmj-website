@@ -1,5 +1,27 @@
 import Image from "next/image";
 
+const renderDescriptionWithLinks = (text: string) => {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  
+  return parts.map((part, index) => {
+    if (urlRegex.test(part)) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-[var(--light-green)] font-semibold"
+        >
+          {part}
+        </a>
+      );
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
+
 const EVENTS_DATA = [
   {
     id: "ms-summer-camp",
@@ -24,7 +46,7 @@ const EVENTS_DATA = [
   {
     id: "hs-nicotine-reach",
     title: "High School: Effects of Nicotine on Brain",
-    description: "We have a team of 9 students building an online tobacco prevention model. The project intends to display the impact of nicotine on the brain, while explaining the molecular and systemic biology in a digestible format. The project is being reviewed by a faculty member from Stanford's REACH program.",
+    description: "We have a team of 9 students building an online tobacco prevention model. The project intends to display the impact of nicotine on the brain, while explaining the molecular and systemic biology in a digestible format. The project is being reviewed by a faculty member from Stanford's REACH program. The project can be accessed here: https://www.biomedjournal.org/",
     status: "current",
     signupsOpen: false,
     airtableEmbedUrl: "",
@@ -103,7 +125,7 @@ export default function Page() {
                         <span className="bg-gray-200 text-gray-700 text-xs font-bold px-3 py-1 rounded-full uppercase">Signups Closed</span>
                       )}
                     </div>
-                    <p className="text-lg text-[var(--dark-green)] leading-relaxed mb-6 opacity-90">{event.description}</p>
+                    <p className="text-lg text-[var(--dark-green)] leading-relaxed mb-6 opacity-90">{renderDescriptionWithLinks(event.description)}</p>
                   </div>
                 </div>
               </div>
@@ -122,7 +144,7 @@ export default function Page() {
             {currentEvents.map((event) => (
               <div key={event.id} className="text-lg text-[var(--dark-green)] leading-relaxed">
                 <h3 className="text-3xl font-bold mb-4">{event.title}</h3>
-                <p className="opacity-90">{event.description}</p>
+                <p className="opacity-90">{renderDescriptionWithLinks(event.description)}</p>
               </div>
             ))}
           </div>
@@ -140,7 +162,7 @@ export default function Page() {
               <div key={event.id} className={`flex flex-col gap-8 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
                 <div className="flex-1 text-lg text-[var(--dark-green)] leading-relaxed">
                   <h3 className="text-3xl font-bold mb-4">{event.title}</h3>
-                  <p className="opacity-90">{event.description}</p>
+                  <p className="opacity-90">{renderDescriptionWithLinks(event.description)}</p>
                 </div>
                 <div className="flex-1 w-full aspect-[4/3] relative bg-gray-100 rounded-2xl overflow-hidden border border-[var(--light-green)]/30">
                   {event.imageSrc ? (
