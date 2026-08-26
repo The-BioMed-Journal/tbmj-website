@@ -23,34 +23,44 @@ const renderDescriptionWithLinks = (text: string) => {
 };
 
 const EVENTS_DATA = [
+  // {
+  //   id: "unique identifier",
+  //   title: "title",
+  //   description: "description",
+  //   status: "upcoming" or "current" or "past",
+  //   signupsOpen: false or true,
+  //   airtableEmbedUrl: "optional, for airtable signup form; leave blank if none",
+  //   imageSrc: "/events/image-path or leave blank for placeholder to take effect",
+  //   imagePlaceholder: "[ image placeholder text ]"
+  // },
   {
-    id: "ms-summer-camp",
-    title: "Middle School Summer Camp",
-    description: "Join us this summer for an immersive science camp geared towards middle schoolers. Through engaging activities and guided lessons, we spark early interest in STEM and lay the groundwork for future scientific curiosity.",
-    status: "upcoming",
-    signupsOpen: true,
-    airtableEmbedUrl: "https://airtable.com/embed/YOUR_FORM_ID_HERE?backgroundColor=green",
-    imageSrc: "",
-    imagePlaceholder: "[ Middle School Camp Image Placeholder ]"
+    id: "berkeley-youth-in-action-day",
+    title: "Berkeley: Youth In Action Day Conference",
+    description: "In the Summer of 2026, we presented Nicotine: Zoomed In to the League of Women Voters, framing the project as a vessel to change education. Pictured are Rania Khan and Haadiyah Pathan speaking about the importance of different industries, such as STEM, getting involved in civic action.",
+    status: "past",
+    signupsOpen: false,
+    airtableEmbedUrl: "",
+    imageSrc: "/events/berkeley-conference.png",
+    imagePlaceholder: "[ Berkeley Conference Image Placeholder ]"
   },
   {
     id: "ms-bootcamp",
     title: "Middle School Experimental Biology Bootcamp",
-    description: "Currently, we are working on our online bootcamp. Our organization will be providing science kits, along with online live sessions to make topics easier to follow along.",
-    status: "current",
+    description: "During the summer of 2026, we were working on our middle school online bootcamp. Our organization provided science kits, along with online live sessions to make topics easier to follow along.",
+    status: "past",
     signupsOpen: false,
     airtableEmbedUrl: "",
-    imageSrc: "",
+    imageSrc: "/events/ms-bootcamp-summer26.png",
     imagePlaceholder: "[ Bootcamp Image Placeholder ]"
   },
   {
     id: "hs-nicotine-reach",
     title: "High School: Effects of Nicotine on Brain",
-    description: "We have a team of 9 students building an online tobacco prevention model. The project intends to display the impact of nicotine on the brain, while explaining the molecular and systemic biology in a digestible format. The project is being reviewed by a faculty member from Stanford's REACH program. The project can be accessed here: https://www.biomedjournal.org/",
-    status: "current",
+    description: "During the summer of 2026, we had a team of 9 students building an online tobacco prevention model. The project intends to display the impact of nicotine on the brain, while explaining the molecular and systemic biology in a digestible format. The project is being reviewed by a faculty member from Stanford's REACH program. The project can be accessed here: https://www.nicotinezoomed.info",
+    status: "past",
     signupsOpen: false,
     airtableEmbedUrl: "",
-    imageSrc: "",
+    imageSrc: "/events/nicotine-website.png",
     imagePlaceholder: "[ Nicotine on Brain Project Image Placeholder ]"
   },
   {
