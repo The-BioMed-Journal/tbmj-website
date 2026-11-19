@@ -11,8 +11,8 @@
   --color-background: var(--soft-white);
   --color-background-green: var(--background-green);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
 }
 
 /* @media (prefers-color-scheme: dark) { */
