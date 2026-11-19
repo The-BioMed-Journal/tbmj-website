@@ -5,13 +5,14 @@ const navItems = [
   { path: "/about", name: "About" },
   { path: "/articles", name: "Articles" },
   { path: "/events", name: "Events" },
+  { path: "/research", name: "Research" },
 ];
 
 export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-[var(--dark-green)]/10 bg-[var(--light-green)]/95 backdrop-blur-md shadow-sm">
-        <div className="mx-auto max-w-screen-xl px-6 md:px-12 py-4 flex items-center justify-between">
+        <div className="mx-auto max-w-screen-xl px-6 md:px-12 py-4 flex flex-wrap gap-4 items-center justify-between">
           {/* Brand */}
           <Link
             href="/"
@@ -21,7 +22,7 @@ export default function Header() {
           </Link>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-6 md:gap-8">
+          <nav className="flex flex-wrap items-center gap-6 md:gap-8">
             {navItems.map(({ path, name }) => (
               <Link
                 key={path}
